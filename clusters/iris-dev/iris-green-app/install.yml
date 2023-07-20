@@ -8,7 +8,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/warroyo/spring-petclinic
+  url: https://github.com/warroyo/iris-green-app
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -18,7 +18,7 @@ metadata:
   namespace: iris-green
 spec:
   interval: 10m0s
-  path: ./kubernetes/k8s
+  path: ./config/k8s/dev
   prune: true
   serviceAccountName: tenant-flux-reconciler
   targetNamespace: iris-green-apps
