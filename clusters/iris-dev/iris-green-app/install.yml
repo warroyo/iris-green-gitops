@@ -2,19 +2,19 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: simple-app
+  name: iris-green-apps
   namespace: iris-green
 spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/warroyo/iris-green-app
+  url: https://github.com/warroyo/iris-green-apps
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: simple-app
+  name: iris-green-apps
   namespace: iris-green
 spec:
   interval: 10m0s
@@ -24,4 +24,4 @@ spec:
   targetNamespace: iris-green-apps
   sourceRef:
     kind: GitRepository
-    name: simple-app
+    name: iris-green-apps
