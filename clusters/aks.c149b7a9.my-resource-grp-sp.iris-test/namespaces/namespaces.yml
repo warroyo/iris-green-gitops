@@ -10,3 +10,16 @@ spec:
   meta:
     labels:
       team: iris-green
+---
+apiVersion: tmc.tanzufield.vmware.com/v1
+kind: TMCNamespace
+metadata:
+  name: iris-green-vmlive
+  labels:
+    version: v1
+spec:
+  fullName:
+    name: iris-green-vmlive
+  meta:
+    labels:
+      team: iris-green
